@@ -1,9 +1,9 @@
 public class Ticket implements Comparable<Ticket> {
-    private int id;
-    private String from;
-    private String to;
-    private int price;
-    private int duration;
+    protected int id;
+    protected String from;
+    protected String to;
+    protected int price;
+    protected int duration;
 
     public Ticket(int id, String from, String to, int price, int duration) {
         this.id = id;
@@ -56,12 +56,6 @@ public class Ticket implements Comparable<Ticket> {
 
     @Override
     public int compareTo(Ticket o) {
-        if (price < o.getPrice()){
-            return -1;
-        } else if (price > o.getPrice()) {
-            return 1;
-        } else {
-            return 0;
-        }
+        return price - o.getPrice();
     }
 }
