@@ -1,5 +1,4 @@
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.testng.annotations.Test;
 
 public class TicketManagerTest {
@@ -44,8 +43,8 @@ public class TicketManagerTest {
         manager.add(ticket4);
         manager.add(ticket5);
 
-        Ticket [] expected = new Ticket[]{ticket5};
-        Ticket [] actual = manager.findAll("IST", "TBS");
+        Ticket[] expected = new Ticket[]{ticket5};
+        Ticket[] actual = manager.findAll("IST", "TBS");
 
 
         Assertions.assertArrayEquals(expected, actual);
@@ -68,8 +67,8 @@ public class TicketManagerTest {
         manager.add(ticket4);
         manager.add(ticket5);
 
-        Ticket [] expected = new Ticket[]{ticket4, ticket2, ticket1};
-        Ticket [] actual = manager.findAll("MSK", "SPB");
+        Ticket[] expected = new Ticket[]{ticket4, ticket2, ticket1};
+        Ticket[] actual = manager.findAll("MSK", "SPB");
 
         Assertions.assertArrayEquals(expected, actual);
     }

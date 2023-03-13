@@ -15,8 +15,6 @@ public class TicketRepository {
     }
 
 
-
-
     public void remove(int id) {
         Ticket[] tmp = new Ticket[tickets.length - 1];
         int copyToIndex = 0;

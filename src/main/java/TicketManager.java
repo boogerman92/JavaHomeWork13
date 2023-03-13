@@ -8,13 +8,13 @@ public class TicketManager {
         this.repo = repo;
     }
 
-    public void add(Ticket ticket){
+    public void add(Ticket ticket) {
         repo.add(ticket);
     }
 
     public Ticket[] findAll(String from, String to) {
         Ticket[] result = new Ticket[0];
-        for (Ticket ticket: repo.findAll()) {
+        for (Ticket ticket : repo.findAll()) {
             if (matches(ticket, from, to)) {
                 Ticket[] tmp = new Ticket[result.length + 1];
                 for (int i = 0; i < result.length; i++) {
@@ -27,12 +27,13 @@ public class TicketManager {
         Arrays.sort(result);
         return result;
     }
+
     public boolean matches(Ticket ticket, String from, String to) {
-        if (ticket.getFrom().equals(from)){
-            if (ticket.getTo().equals(to)){
+        if (ticket.getFrom().equals(from)) {
+            if (ticket.getTo().equals(to)) {
                 return true;
-                }
             }
+        }
 
         return false;
     }

@@ -5,7 +5,7 @@ public class TicketRepositoryTest {
 
     TicketRepository repo = new TicketRepository();
 
-    Ticket ticket1 = new Ticket(1, "MSK","SPB", 100, 90);
+    Ticket ticket1 = new Ticket(1, "MSK", "SPB", 100, 90);
     Ticket ticket2 = new Ticket(2, "MSK", "SPB", 50, 150);
     Ticket ticket3 = new Ticket(3, "MSK", "DXB", 500, 400);
     Ticket ticket4 = new Ticket(4, "MSK", "SPB", 10, 15);
